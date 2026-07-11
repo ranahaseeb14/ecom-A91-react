@@ -27,7 +27,7 @@ function CreateProduct() {
             price: "",
             review: "",
         })
-        navigate("/")
+        navigate("/products")
     }
     return (
         <div className='container'>

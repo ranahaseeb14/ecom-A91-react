@@ -28,7 +28,7 @@ function EditProduct() {
             price: "",
             review: "",
         })
-        navigate("/")
+        navigate("/products")
     }
     async function getProductbyID() {
         const res = await axios.get(`http://localhost:2000/products/${params.id}`)

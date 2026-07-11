@@ -38,7 +38,7 @@ function Products() {
 
                                 <Card.Text>{mereProducts.desc}</Card.Text>
                                 <Card.Text>
-                                    {mereProducts.price}
+                                    {mereProducts.price + "$"}
                                 </Card.Text>
                                 <div className="flex justify-between">
                                     <Button variant="primary">{mereProducts.review}</Button>
