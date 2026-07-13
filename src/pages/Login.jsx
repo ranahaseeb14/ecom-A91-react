@@ -17,7 +17,7 @@ function Login() {
     async function submitHandler(e) {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:2000/login', authData)
+            const res = await axios.post(`${process.env.VITE_API_URL}/login`, authData)
             console.log(res)
             setAuthData({
                 email: "",
