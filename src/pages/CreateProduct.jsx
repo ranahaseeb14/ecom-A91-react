@@ -19,7 +19,7 @@ function CreateProduct() {
     }
     async function submitHandler(e) {
         e.preventDefault()
-        const res = await axios.post(`${process.env.VITE_API_URL}/create`, product)
+        const res = await axios.post(`${process.env.API_URL}/create`, product)
         toast.success('Product Created Successfully')
         setProduct({
             title: "",

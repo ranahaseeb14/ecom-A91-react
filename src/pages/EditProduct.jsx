@@ -20,7 +20,7 @@ function EditProduct() {
     }
     async function submitHandler(e) {
         e.preventDefault()
-        const res = await axios.patch(`${process.env.VITE_API_URL}/products/${params.id}`, product)
+        const res = await axios.patch(`${process.env.API_URL}/products/${params.id}`, product)
         toast.success('Product Updated Successfully')
         setProduct({
             title: "",
@@ -31,7 +31,7 @@ function EditProduct() {
         navigate("/products")
     }
     async function getProductbyID() {
-        const res = await axios.get(`${process.env.VITE_API_URL}/products/${params.id}`)
+        const res = await axios.get(`${process.env.API_URL}/products/${params.id}`)
         setProduct(res.data)
     }
     useEffect(() => {

@@ -9,7 +9,7 @@ function Products() {
     const navigate = useNavigate();
 
     async function fetchProducts() {
-        const res = await axios.get(`${process.env.VITE_API_URL}/products`)
+        const res = await axios.get(`${process.env.API_URL}/products`)
         console.log(res.data)
         setProduct(res.data)
     }
@@ -17,7 +17,7 @@ function Products() {
         fetchProducts()
     }, [])
     async function deleteProduct(id) {
-        const data = await axios.delete(`${process.env.VITE_API_URL}/products/${id}`)
+        const data = await axios.delete(`${process.env.API_URL}/products/${id}`)
         const singleProduct = product.filter((mereProducts) => mereProducts._id !== id)
         setProduct(singleProduct)
         toast.success('Product Deleted Successfully')
