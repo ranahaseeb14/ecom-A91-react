@@ -31,7 +31,7 @@ function EditProduct() {
         navigate("/products")
     }
     async function getProductbyID() {
-        const res = await axios.get(`${process.env.API_URL}/products/${params.id}`)
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/products/${params.id}`)
         setProduct(res.data)
     }
     useEffect(() => {
