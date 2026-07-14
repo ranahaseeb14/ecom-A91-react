@@ -18,7 +18,7 @@ function Register() {
     async function submitHandler(e) {
         e.preventDefault()
         try {
-            const res = await axios.post(`${process.env.API_URL}/register`, authData)
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/register`, authData)
             console.log(res)
             setAuthData({
                 username: "",
@@ -28,6 +28,7 @@ function Register() {
             navigate('/')
 
         } catch (error) {
+            console.log(error.response?.data)
             console.log(error)
         }
     }

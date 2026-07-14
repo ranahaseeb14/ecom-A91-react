@@ -5,9 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  define: {
-    'process.env.API_URL': JSON.stringify(process.env.API_URL ?? 'https://ecom-a91-node.onrender.com'),
-  },
   plugins: [
     react(),
     tailwindcss(),

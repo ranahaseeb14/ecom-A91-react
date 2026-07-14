@@ -20,7 +20,7 @@ function EditProduct() {
     }
     async function submitHandler(e) {
         e.preventDefault()
-        const res = await axios.patch(`${process.env.API_URL}/products/${params.id}`, product)
+        const res = await axios.patch(`${import.meta.env.VITE_API_URL}/products/${params.id}`, product)
         toast.success('Product Updated Successfully')
         setProduct({
             title: "",
