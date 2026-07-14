@@ -29,7 +29,7 @@ function Products() {
                 <Button variant='primary' onClick={() => navigate('/create-product')}>Create</Button>
 
             </div>
-            <div className="products flex flex-wrap justify-between gap-4">
+            <div className="products flex flex-wrap justify-between gap-14">
                 {
                     product.map((mereProducts) => {
                         return <Card style={{ width: '18rem' }} key={mereProducts._id}>
